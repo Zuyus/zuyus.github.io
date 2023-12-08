@@ -1,31 +1,483 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile Cá nhân</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="title" content="DUY Ú PROFILE" />
+  <meta name="description"
+    content="Website chia sẽ những thông tin cơ bản về Nguyễn Khánh Duy, giúp bạn hiểu về Liêm hơn.">
+  <meta name="author" content="Nguyễn Khánh Duy">
+  <meta http-equiv="content-language" content="vi">
+  <meta property="og:title" content="DUY Ú DEVELOPER" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://duydeveloper.id.vn" />
+  <meta property="og:image" content="/images/banthan.png" />
+  <meta property="og:description"
+    content="Website chia sẽ những thông tin cơ bản về Nguyễn Khánh Duy, giúp bạn hiểu về Duy hơn" />
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="css/Font/fonts.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/sweetalert2.css" />
+  <link rel="stylesheet" href="css/skins/color-1.css" />
+  <link rel="stylesheet" href="css/loading.css">
+  <link rel="stylesheet" href="css/all.min.css" />
+  <!-- Style Switcher -->
+  <link rel="stylesheet" href="css/style-switcher.css">
+  <link rel="stylesheet" href="css/skins/color-1.css" class="alternate-style" title="color-1" disabled>
+  <link rel="stylesheet" href="css/skins/color-2.css" class="alternate-style" title="color-2" disabled>
+  <link rel="stylesheet" href="css/skins/color-3.css" class="alternate-style" title="color-3" disabled>
+  <link rel="stylesheet" href="css/skins/color-4.css" class="alternate-style" title="color-4" disabled>
+  <link rel="stylesheet" href="css/skins/color-5.css" class="alternate-style" title="color-5" disabled>
+  <title>DUY Ú PROFILE</title>
 </head>
+
 <body>
-    <div class="hero">
-        <nav>
-            <img src="img/logoduy.jpg" class="logo"/>
-            <ul>
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">ABOUT</a></li>
-                <li><a href="#">PROFILE</a></li>
-                <li><a href="#">CONTACT</a></li>
-                <li><a href="#">HELP</a></li>
-            </ul>
-        </nav>
-        <div class="detel">
-            <h1>I,m Duy Ú <span>Developer</span></h1>
-            <p>Information Teachnology Peole</p>
-            <a href="#">DOWNLOAD CV</a>
-        </div>
-        <div class="images">
-            <img src="img/nen1.jpg" class="background"/>
-        </div>
+
+  <!-- Loading Start -->
+  <div id="preloader">
+    <div class='preloader'>
+      <span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+      <div class='base'>
+        <span></span>
+        <div class='face'></div>
+      </div>
     </div>
+    <div class='longfazers'>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <h1>Đang Tới......</h1>
+  </div>
+  <!-- Loading End -->
+
+  <div class="main hidden">
+    <!-- Container Start -->
+    <div class="main-container">
+      <!-- Side Start -->
+      <div class="side">
+        <div class="logo">
+          <a href="/"><span>K</span>.Duy</a>
+        </div>
+        <div class="nav-toggler">
+          <span></span>
+        </div>
+        <ul class="nav">
+          <li>
+            <a href="#home" class="active"><i> <i class="fa fa-home"></i> </i>Home</a>
+          </li>
+          <li>
+            <a onclick="onClickAbout()" href="#about"><i> <i class="fa fa-user"></i> </i>About</a>
+          </li>
+          <li>
+            <a href="#project"><i> <i class="fa fa-list-check"></i> </i>Project</a>
+          </li>
+          <li>
+            <a href="#social"><i> <i class="fa fa-globe"></i> </i>Social</a>
+          </li>
+          <li>
+            <a href="#contact"><i><i class="fa fa-comments"></i></i>Contact</a>
+          </li>
+        </ul>
+      </div>
+      <!-- Side End -->
+      <!-- Content Start -->
+      <div class="main-content">
+        <!-- Home Start -->
+        <section class="home section active" id="home">
+          <div class="container">
+            <div class="row">
+              <div class="home-info padd-15">
+                <h3 class="hello">
+                  Xin chào, tôi tên là <span class="name">DUY Ú</span>
+                </h3>
+                <h3 class="my-profession">
+                  Tôi là một <span class="typing">Information Technology People</span>
+                </h3>
+                <p>
+                  Tôi đang chuyên ngành công nghệ thông tin (IT) tại
+                  trường đại học Nam Cần Thơ (DNC). Chuyên môn của tôi là tạo,
+                  quản lý và thiết kế trang web, và nhiều thứ khác...
+                </p>
+                <a href="#about" data-section-index="0" class="btn hire-me"><span>Xem Thêm</span>
+                  <div class="liquid"></div>
+                </a>
+              </div>
+              <div class="home-img padd-15">
+                <img src="images/avatar.jpg" alt="Avatar" />
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Home End -->
+
+        <!-- About Start -->
+        <section class="about section" id="about">
+          <div class="container">
+            <div class="row">
+              <div class="section-title padd-15">
+                <h2>Sơ yếu lý lịch</h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="about-content padd-15">
+                <div class="row">
+                  <div class="about-text padd-15">
+                    <h3>
+                      Tôi tên Nguyễn Khánh Duy (Duy Ú) và là một
+                      <span>Information Technology People</span>
+                    </h3>
+                    <p>
+                      Dưới đây là sơ lược về thông tin cá nhân của tôi, bạn có thể xem qua để hiểu đôi chút về tôi.
+                    </p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="personal-info padd-15">
+                    <div class="row personal-info-row">
+                      <div class="info-item padd-15">
+                        <p>Sinh nhật : <span>17/03/2003</span></p>
+                      </div>
+                      <div class="info-item padd-15">
+                        <p>Tuổi : <span>21</span></p>
+                      </div>
+                      <div class="info-item padd-15">
+                        <p>Quê quán : <span>Tháp Mười - Đồng Tháp<p></p></span></p>
+                      </div>
+                      <div class="info-item padd-15">
+                        <p>Bằng cấp : <span>Đại Học (IT)</span></p>
+                      </div>
+                      <div class="info-item padd-15">
+                        <p>Email : <span>ngkduy2003@gmail.com</span></p>
+                      </div>
+                      <div class="info-item padd-15">
+                        <p>SĐT : <span>(+84) 774 468 003</span></p>
+                      </div>
+                      <div class="info-item padd-15">
+                        <p>Chiều cao : <span>1m76</span></p>
+                      </div>
+                      <div class="info-item padd-15">
+                        <p>Cân nặng : <span>83kg</span></p>
+                      </div>
+                      <div class="info-item padd-15">
+                        <p>Tính cách : <span>Hoà đồng, vui vẻ</span></p>
+                      </div>
+                      <div class="info-item padd-15">
+                        <p>Sở thích : <span>Lập trình , Nghe nhạc , Chơi game</span></p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="buttons padd-15">
+                        <!-- download with google drive downloadURI("#")  -->
+                        <a href="#project" onclick='downloadURI("#")'
+                          data-section-index="1" class="btn hire-me"><span style="margin: auto;">Download CV</span>
+                          <div class="liquid"></div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!--sKills-->
+                  <div class="skills padd-15">
+                    <div class="row">
+                      <div class="skill-item padd-15">
+                        <h5>JS</h5>
+                        <div class="progress">
+                          <div class="progress-in"></div>
+                          <div class="skill-percent"></div>
+                        </div>
+                      </div>
+                      <div class="skill-item padd-15">
+                        <h5>ReactJS</h5>
+                        <div class="progress">
+                          <div class="progress-in"></div>
+                          <div class="skill-percent"></div>
+                        </div>
+                      </div>
+                      <div class="skill-item padd-15">
+                        <h5>HTML</h5>
+                        <div class="progress">
+                          <div class="progress-in"></div>
+                          <div class="skill-percent"></div>
+                        </div>
+                      </div>
+                      <div class="skill-item padd-15">
+                        <h5>CSS</h5>
+                        <div class="progress">
+                          <div class="progress-in"></div>
+                          <div class="skill-percent"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--end skill-->
+                </div>
+                <div class="row">
+                  <div class="education padd-15">
+                    <h3 class="title">Trước 18 tuổi</h3>
+                    <div class="row">
+                      <div class="timeline-box padd-15">
+                        <div class="timeline shadow-dark">
+                          <!-- Timeline item -->
+                          <div class="timeline-item">
+                            <div class="circle-dot"></div>
+                            <h3 class="timeline-date">
+                              <i><i class="fa fa-calendar"></i></i> 2005 - 2010
+                            </h3>
+                            <h4 class="timeline-title">Học Tiểu Học (Lớp 1 - 5)</h4>
+                            <p class="timeline-text">Tôi bắt đầu vào học lớp 1 năm tôi đủ 6 tuổi (2005), trong khoảng
+                              thời gian 5 năm học cấp 1 tôi đều học tại trường Tiểu Học Nhơn Ái 1 và tốt nghiệp cấp 1
+                              với loại khá vào năm 2009-2010.</p>
+                          </div>
+                          <!-- Timeline item -->
+                          <div class="timeline-item">
+                            <div class="circle-dot"></div>
+                            <h3 class="timeline-date">
+                              <i><i class="fa fa-calendar"></i></i> 2010 - 2014
+                            </h3>
+                            <h4 class="timeline-title">Học Trung Học Cơ Sở (Lớp 6- 9)</h4>
+                            <p class="timeline-text">Tôi đã có 4 năm gắn bó với ngôi trường Trung Học Cơ Sở Phong Điền
+                              và tốt nghiệp cấp 2 với loại khá vào năm 2013-2014.
+                            </p>
+                          </div>
+                          <!-- Timeline item -->
+                          <div class="timeline-item">
+                            <div class="circle-dot"></div>
+                            <h3 class="timeline-date">
+                              <i><i class="fa fa-calendar"></i></i> 2014 - 2017
+                            </h3>
+                            <h4 class="timeline-title">Học Trung Học Phổ Thông (Lớp 10-12)</h4>
+                            <p class="timeline-text">Tôi đã có 3 năm gắn bó với ngôi trường Trung Học Phổ Thông Phan Văn
+                              Trị, năm tôi vào học lớp 10 là năm 2014-2015 và năm 2016 tôi được kết nạp vào đoàn thanh
+                              niên cộng sản Hồ Chí Minh và tốt nghiệp cấp 3 với loại khá vào năm 2016-2017</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="education padd-15">
+                    <h3 class="title">Sau 18 tuổi</h3>
+                    <div class="row">
+                      <div class="timeline-box padd-15">
+                        <div class="timeline shadow-dark">
+                          <!-- Timeline item -->
+                          <div class="timeline-item">
+                            <div class="circle-dot"></div>
+                            <h3 class="timeline-date">
+                              <i><i class="fa fa-calendar"></i></i> 2020- 2021
+                            </h3>
+                            <h4 class="timeline-title">Học Đại Học Năm Nhất</h4>
+                            <p class="timeline-text">Tôi đã bắt đầu vào học đại học vào tháng 8 năm 2020 tại trường Đại
+                              Học Nam Cần Thơ tôi đã có 4 năm gắn bó với ngôi trường này, chuyên ngành tôi theo học là
+                              công nghệ thông tin (IT).</p>
+                          </div>
+                          <!-- Timeline item -->
+                          <div class="timeline-item">
+                            <div class="circle-dot"></div>
+                            <h3 class="timeline-date">
+                              <i><i class="fa fa-calendar"></i></i> 2020 - 2024
+                            </h3>
+                            <h4 class="timeline-title">Học Đại Học</h4>
+                            <p class="timeline-text">Tôi đã có 4 năm học tại trường Đại Học Nam Cần Thơ, nếu theo đúng
+                              dự kiến thì gần cuối năm 2025 tôi đã có thể tốt nghiệp.</p>
+                          </div>
+                          <!-- Timeline item -->
+                          <div class="timeline-item">
+                            <div class="circle-dot"></div>
+                            <h3 class="timeline-date">
+                              <i><i class="fa fa-calendar"></i></i> 2025 - ...
+                            </h3>
+                            <h4 class="timeline-title">Đang Làm Việc</h4>
+                            <p class="timeline-text">Tôi đang làm việc tại nhà và đang tìm kiếm một công việc đúng với
+                              chuyên ngành tôi đã học và phù hợp với bản thân mình.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </section>
+        <!-- About End -->
+
+        <!--Project-->
+
+        <!-- Social Start -->
+        <section class="social section" id="social">
+          <div class="container">
+            <div class="row">
+              <div class="section-title padd-15">
+                <h2>Mạng Xã Hội</h2>
+              </div>
+            </div>
+            <div class="row">
+              <!-- Social Item Start -->
+              <div class="social-item padd-15">
+                <div class="social-item-inner">
+                  <div class="icon"><i><i class="fa-brands fa-facebook"></i></i></div>
+                  <h4>Facebook</h4>
+                  <span>Facebook: </span><a href="https://www.facebook.com/profile.php?id=100082129174754" target="_blank">Nguyễn Khánh Duy</a>
+                  <br>
+                </div>
+              </div>
+              <!-- Social Item End -->
+              <!-- Social Item Start -->
+              <div class="social-item padd-15">
+                <div class="social-item-inner">
+                  <div class="icon"><i><i class="fa-brands fa-youtube"></i></i></i></div>
+                  <h4>Youtube</h4>
+                  <span>Youtube: </span><a href="https://www.youtube.com/@duyusdeveloper" target="_blank">DUY DEVELOPER (DUY Ú)</a>
+                </div>
+              </div>
+              <!-- Social Item End -->
+              <!-- Social Item Start -->
+              <div class="social-item padd-15">
+                <div class="social-item-inner">
+                  <div class="icon"><i><i class="fa-solid fa-envelope"></i></i></div>
+                  <h4>E-mail</h4>
+                  <span>Bạn có thể gửi mail cho tôi đến </span><a
+                    href="mailto:ngkduy2003@gmail.com">ngkduy2003@gmail.com</a>
+                </div>
+              </div>
+              <!-- Social Item End -->
+            </div>
+          </div>
+        </section>
+        <!-- Social End -->
+
+        <!-- Contact Start -->
+        <section class="contact section" id="contact">
+          <div class="container">
+            <div class="row">
+              <div class="section-title padd-15">
+                <h2>Liên Hệ Với Tôi</h2>
+              </div>
+            </div>
+            <h3 class="contact-title padd-15">BẠN CÓ CÂU HỎI GÌ CHO TÔI KHÔNG ?</h3>
+            <h4 class="contact-sub-title padd-15">TÔI SẼ GIÚP BẠN NHỮNG VẤN ĐỀ MÀ TÔI BIẾT</h4>
+            <div class="row">
+              <!-- Contact Info Item Start -->
+              <a href="tel:0782872822" class="contact-info-item padd-15">
+                <div class="icon"><i><i class="fa fa-phone"></i></i></div>
+                <h4>Gọi Cho Tôi</h4>
+                <p>(+84) 774 468 003</p>
+              </a>
+              <!-- Contact Info Item End -->
+              <!-- Contact Info Item Start -->
+              <a href="https://maps.app.goo.gl/6C59k6Akae5tnHcV8" target="_blank" rel="noopener noreferrer"
+                class="contact-info-item padd-15">
+                <div class="icon"><i><i class="fa-solid fa-location-dot"></i></i></div>
+                <h4>Vị Trí</h4>
+                <p>Tháp Mười - Đồng Tháp</p>
+              </a>
+              <!-- Contact Info Item End -->
+              <!-- Contact Info Item Start -->
+              <a href="https://www.facebook.com/profile.php?id=100082129174754" target="_blank" rel="noopener noreferrer"
+                class="contact-info-item padd-15">
+                <div class="icon"><i><i class="fa fa-facebook"></i></i></div>
+                <h4>Facebook</h4>
+                <p>DUY NGUYỄN (ZUY Ú)</p>
+              </a>
+              <!-- Contact Info Item End -->
+              <!-- Contact Info Item Start -->
+              <a href="https://www.youtube.com/@duyusdeveloper" target="_blank" rel="noopener noreferrer"
+                class="contact-info-item padd-15">
+                <div class="icon"><i><i class="fa-brands fa-youtube"></i></i></div>
+                <h4>Youtube</h4>
+                <p>DUY DEVELOPER (DUY Ú)</p>
+              </a>
+              <!-- Contact Info Item End -->
+            </div>
+
+            <h3 class="contact-title padd-15">GỬI EMAIL CHO TÔI</h3>
+            <h4 class="contact-sub-title padd-15">TÔI SẼ PHẢN HỒI LẠI TIN NHẮN</h4>
+            <!-- Contact Form -->
+            <div class="row">
+              <form id="my-form" action="https://formsubmit.co/3217e5e90ed377b9dc274f02ebe42660" method="POST"
+                class="contact-form padd-15">
+                <div class="row">
+                  <div class="form-item col-6 padd-15">
+                    <div class="form-group">
+                      <input name="Họ và Tên" type="text" class="form-control" placeholder="Họ và Tên" required>
+                    </div>
+                  </div>
+                  <div class="form-item col-6 padd-15">
+                    <div class="form-group">
+                      <input name="E-mail" type="email" class="form-control" placeholder="E-mail" required>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-item col-12 padd-15">
+                    <div class="form-group">
+                      <input name="Tiêu Đề" type="text" class="form-control" placeholder="Tiêu Đề" required>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-item col-12 padd-15">
+                    <div class="form-group">
+                      <textarea spellcheck="false" name="Lời Nhắn" id="" class="form-control" placeholder="Lời Nhắn"
+                        required></textarea>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-item col-12 padd-15">
+                    <button type="submit" class="btn hire-me"><span>Gửi Mail</span>
+                      <div class="liquid"></div>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+        <!-- Contact End -->
+      </div>
+      <!-- Content End -->
+    </div>
+    <!-- Container End -->
+
+    <!-- Style Switcher Start -->
+    <div class="style-switcher">
+      <div class="style-switcher-toggler s-icon">
+        <i><i class="fa fa-gear fa-spin"></i></i>
+      </div>
+      <div class="day-night s-icon">
+        <i class="fas "></i>
+      </div>
+      <h4>Theme Colors</h4>
+      <div class="colors">
+        <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+        <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+        <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+        <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+        <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+      </div>
+    </div>
+    <!-- Style Switcher End -->
+
+  </div>
+
+
+  <!-- JS Files -->
+  <script src="js/typed.min.js"></script>
+  <script src="js/vanilla-tilt.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/pagination.js"></script>
+  <script src="js/sweetalert2.all.min.js"></script>
+  <script src="js/all.min.js"></script>
+  <script src="js/styler-switcher.js"></script>
 </body>
+
 </html>

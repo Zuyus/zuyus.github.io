@@ -1,0 +1,415 @@
+@font-face {
+    font-family: Digital_Font;
+    src: url(Font/digital-7/digital-7.ttf);
+}
+
+.card-bank-title {
+    color: var(--skin-color);
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.card-bank-sub-title {
+    color: var(--text-black-900);
+    text-align: center;
+    font-size: 15px;
+}
+
+.card-bank-hint {
+    color: var(--text-black-700);
+    text-align: center;
+    font-size: 16px;
+    font-style: italic;
+    margin-bottom: 45px;
+}
+
+.card-bank-position {
+    width: 100vw;
+    margin-bottom: 60px;
+}
+
+.card-bank {
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    width: 500px;
+    height: 280px;
+    margin: 0px 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 560px) {
+    .card-bank {
+        width: 400px;
+    }
+}
+
+@media (max-width: 425px) {
+    .card-bank {
+        width: 350px;
+    }
+
+    .card-bank-position .card-bank .bank {
+        height: 12%;
+    }
+
+    .card-bank-position .card-bank .visa_debit .visa {
+        width: 70px;
+        height: 40px;
+        top: 222px;
+        right: 5px;
+    }
+
+    .card-bank-position .card-bank .visa_debit .debit {
+        font-size: 13px;
+        top: 250px;
+        right: 27px;
+        color: #fff;
+    }
+}
+
+@media (max-width: 370px) {
+    .card-bank {
+        width: 222px;
+    }
+
+    .card-bank-position .card-bank .chip {
+        display: none;
+    }
+
+    .card-bank-position .card-bank .wave {
+        display: none;
+    }
+
+    .card-bank-position .card-bank .bank {
+        height: 22%;
+    }
+
+    .card-bank-position .card-bank .number {
+        top: 125px;
+        left: 15px;
+    }
+
+    .card-bank-position .card-bank .number h6:nth-child(1) {
+        display: none;
+    }
+
+    .card-bank-position .card-bank .number h6 {
+        font-size: 30px;
+    }
+
+    .card-bank-position .card-bank .ex_date {
+        display: none;
+    }
+
+    .card-bank-position .card-bank .holder {
+        top: 175px;
+        left: 0;
+    }
+
+    .card-bank-position .card-bank .holder span {
+        display: none;
+    }
+
+    .card-bank-position .card-bank .holder h2 {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .card-bank-position .card-bank .cvv {
+        display: none;
+    }
+
+    .card-bank-position .card-bank .visa_debit .visa {
+        width: 110px;
+        height: 80px;
+        top: 190px;
+        right: 50px;
+    }
+
+    .card-bank-position .card-bank .visa_debit .debit {
+        top: 245px;
+        right: 90px;
+        font-size: 18px;
+        color: #fff;
+    }
+}
+
+.card-bank::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background: url('../images/bulid.png') no-repeat center center/cover; */
+    background-image: linear-gradient(45deg, var(--skin-color), rgb(165, 165, 165));
+    /* opacity: .5; */
+}
+
+.card-bank .map {
+    position: absolute;
+    width: 100%;
+    opacity: 0.8;
+    user-select: none;
+    pointer-events: none;
+}
+
+.card-bank .bank {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    height: 20%;
+    z-index: 999;
+    font-style: italic;
+    color: #fff;
+    letter-spacing: 1px;
+    user-select: none;
+    pointer-events: none;
+}
+
+.card-bank .chip {
+    position: absolute;
+    width: 60px;
+    height: 45px;
+    background: #e9df4e;
+    border-radius: 5px;
+    top: 60px;
+    left: 25px;
+    border: 1px solid #000;
+    overflow: hidden;
+    z-index: 999;
+}
+
+.card-bank .chip h6:nth-child(1) {
+    width: 25px;
+    height: 15px;
+    border: 1px solid #000;
+    margin-top: -1px;
+    border-top: 0px;
+    border-left: 0px;
+}
+
+.card-bank .chip h6:nth-child(2) {
+    width: 25px;
+    height: 10px;
+    border: 1px solid #000;
+    margin-top: -1px;
+    border-top: 0px;
+    border-left: 0px;
+}
+
+.card-bank .chip h6:nth-child(3) {
+    width: 25px;
+    height: 10px;
+    border: 1px solid #000;
+    margin-top: -1px;
+    border-top: 0px;
+    border-left: 0px;
+}
+
+.card-bank .chip h6:nth-child(4) {
+    width: 25px;
+    height: 18px;
+    border: 1px solid #000;
+    margin-top: -1px;
+    border-top: 0px;
+    border-left: 0px;
+}
+
+.card-bank .chip h6:nth-child(5) {
+    position: absolute;
+    width: 20px;
+    height: 10px;
+    border-bottom: 1px solid #000;
+    top: 0;
+    left: 25px;
+}
+
+.card-bank .chip h6:nth-child(6) {
+    position: absolute;
+    width: 20px;
+    height: 30px;
+    border-bottom: 1px solid #000;
+    top: 10px;
+    left: 25px;
+}
+
+.card-bank .chip h6:nth-child(7) {
+    position: absolute;
+    width: 25px;
+    height: 10px;
+    border: 1px solid #000;
+    top: 15px;
+    left: 45px;
+}
+
+.card-bank .chip h6:nth-child(8) {
+    position: absolute;
+    width: 25px;
+    height: 10px;
+    border: 1px solid #000;
+    border-top: 0px;
+    top: 25px;
+    left: 45px;
+}
+
+.card-bank .chip h6:nth-child(9) {
+    position: absolute;
+    width: 25px;
+    height: 15px;
+    border: 1px solid #000;
+    border-top: 0px;
+    top: 35px;
+    left: 45px;
+}
+
+.card-bank .number {
+    position: absolute;
+    width: 250px;
+    height: 20px;
+    top: 130px;
+    left: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 999;
+}
+
+.card-bank .number h6 {
+    color: #fff;
+    font-size: 25px;
+    font-family: Digital_Font;
+    letter-spacing: 3px;
+    z-index: 999;
+}
+
+.card-bank .number h6:first-child {
+    user-select: none;
+}
+
+.card-bank .number h6:last-child {
+    letter-spacing: 10px;
+}
+
+.card-bank .wave {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 62px;
+    left: 100px;
+    user-select: none;
+    pointer-events: none;
+    z-index: 999;
+}
+
+.card-bank .ex_date {
+    position: absolute;
+    top: 165px;
+    left: 25px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    z-index: 999;
+}
+
+.card-bank .ex_date span {
+    font-size: 9px;
+    font-weight: 600;
+    line-height: 10px;
+    user-select: none;
+}
+
+.card-bank .ex_date h3 {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 12px;
+    margin-left: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.card-bank .ex_date h3 span {
+    font-size: 12px;
+    margin: 0px 2px;
+}
+
+.card-bank .holder {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    top: 195px;
+    left: 25px;
+    z-index: 999;
+}
+
+.card-bank .holder span {
+    font-size: 9px;
+    font-weight: 600;
+    line-height: 10px;
+    user-select: none;
+    z-index: 999;
+}
+
+.card-bank .holder h2 {
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    color: #fff;
+    line-height: 12px;
+    margin-left: 8px;
+    display: flex;
+    align-items: center;
+    z-index: 999;
+}
+
+.card-bank .cvv {
+    position: absolute;
+    color: #fff;
+    top: 230px;
+    left: 25px;
+    font-size: 13px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    z-index: 999;
+}
+
+.card-bank .cvv span {
+    user-select: none;
+}
+
+.card-bank .cvv h5 {
+    font-size: 14px;
+    margin-left: 5px;
+    background: #121213;
+    padding: 1px 10px;
+    border-radius: 3px;
+    letter-spacing: 1px;
+}
+
+.card-bank .visa_debit {
+    user-select: none;
+    pointer-events: none;
+    z-index: 999;
+}
+
+.card-bank .visa_debit .visa {
+    position: absolute;
+    top: 200px;
+    right: 5px;
+    width: 110px;
+    height: 80px;
+    z-index: 999;
+}
+
+.card-bank .visa_debit .debit {
+    position: absolute;
+    top: 250px;
+    right: 25px;
+    color: #fff;
+    z-index: 999;
+}
